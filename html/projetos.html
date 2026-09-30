@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/html/">
+  <link rel="icon" href="../imagens/ong.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Projetos e participação | ONG Sementes do Amanhã</title>
+</head>
+<body>
+  <header>
+    <h1>Projetos e participação</h1>
+    <p>Conheça as formas de apoiar nossa comunidade.</p>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu principal" aria-expanded="false" aria-controls="main-navigation">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <nav id="main-navigation" class="primary-navigation" aria-label="Navegação principal">
+      <ul id="main-navigation-list">
+        <li><a href="index.html">Início</a></li>
+        <li class="has-submenu">
+          <a href="projetos.html">Projetos</a>
+          <button class="submenu-toggle" type="button" aria-label="Abrir submenu de Projetos" aria-expanded="false" aria-controls="projects-submenu">
+            <span class="submenu-chevron" aria-hidden="true"></span>
+          </button>
+          <ul class="submenu" id="projects-submenu">
+            <li><a href="projetos.html#projetos-sociais">Projetos sociais</a></li>
+            <li><a href="projetos.html#campanhas">Campanhas</a></li>
+            <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+          </ul>
+        </li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <section id="projetos-sociais">
+      <h2>Projetos sociais</h2>
+      <p>Nossas atividades fictícias foram pensadas para incentivar aprendizagem, convivência e expressão.</p>
+      <div id="projects-container" class="project-grid" aria-label="Projetos sociais" aria-live="polite"></div>
+    </section>
+
+    <section id="campanhas">
+      <h2>Campanhas de doação</h2>
+      <p>Campanhas solidárias podem reunir recursos e itens importantes para as atividades.</p>
+      <ul>
+        <li>Arrecadação de livros em bom estado para o espaço de leitura. <span class="badge badge--donation">Doação</span></li>
+        <li>Campanha de materiais escolares no início do ano letivo. <span class="badge badge--donation">Doação</span></li>
+        <li>Coleta de alimentos não perecíveis para famílias da comunidade. <span class="badge badge--donation">Doação</span></li>
+      </ul>
+    </section>
+
+    <section id="voluntariado">
+      <h2>Voluntariado</h2>
+      <h3>Compartilhe seu tempo e suas habilidades</h3>
+      <p>Pessoas voluntárias podem colaborar com organização, leitura, atividades educativas e apoio em eventos. A participação deve ser combinada com a equipe responsável.</p>
+      <ul>
+        <li>Ajude a organizar encontros e campanhas.</li>
+        <li>Compartilhe uma habilidade em uma oficina.</li>
+        <li>Apoie a comunicação e a divulgação das iniciativas.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Como contribuir</h2>
+      <h3>Escolha uma forma de participação</h3>
+      <ol>
+        <li>Conheça as atividades e campanhas desta página.</li>
+        <li>Converse com a organização para confirmar necessidades e combinar a colaboração.</li>
+        <li>Se desejar manifestar interesse, acesse o <a href="cadastro.html">formulário de cadastro</a>.</li>
+      </ol>
+      <p>Esta iniciativa é fictícia e não recebe doações reais.</p>
+    </section>
+
+    <section class="component-showcase" aria-labelledby="component-showcase-title">
+      <h2 id="component-showcase-title">Componentes demonstrativos</h2>
+      <p>Exemplos visuais de categorias, mensagens e interações para esta atividade.</p>
+
+      <div class="showcase-block">
+        <h3>Categorias</h3>
+        <ul class="badge-list" aria-label="Categorias de atuação">
+          <li><span class="badge badge--education">Educação</span></li>
+          <li><span class="badge badge--environment">Meio ambiente</span></li>
+          <li><span class="badge badge--volunteer">Voluntariado</span></li>
+          <li><span class="badge badge--donation">Doação</span></li>
+        </ul>
+      </div>
+
+      <div class="showcase-block">
+        <h3>Alertas</h3>
+        <div class="alert-stack">
+          <div class="alert alert-success">
+            <strong>Sucesso:</strong> atividade demonstrativa concluída.
+          </div>
+          <div class="alert alert-info">
+            <strong>Informação:</strong> o conteúdo deste site é fictício e acadêmico.
+          </div>
+          <div class="alert alert-warning">
+            <strong>Aviso:</strong> confirme as necessidades antes de realizar uma contribuição.
+          </div>
+          <div class="alert alert-error">
+            <strong>Erro:</strong> revise os campos destacados antes de enviar o formulário demonstrativo.
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-block">
+        <h3>Interações</h3>
+        <div class="showcase-actions">
+          <button id="show-toast" type="button">Mostrar toast</button>
+          <button id="open-info-modal" type="button">Abrir modal de informação</button>
+          <button type="button" disabled>Ação indisponível</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="demo-toast" class="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+      <span>Esta é uma notificação demonstrativa.</span>
+      <button id="close-toast" class="toast-close" type="button" aria-label="Fechar notificação">Fechar</button>
+    </div>
+    <dialog id="info-modal" class="info-modal" aria-labelledby="info-modal-title" aria-modal="true">
+      <div class="info-modal__header">
+        <h3 id="info-modal-title">Sobre esta demonstração</h3>
+        <button class="icon-button close-info-modal" type="button" aria-label="Fechar janela de informação">×</button>
+      </div>
+      <p>A ONG Sementes do Amanhã e as iniciativas apresentadas são fictícias e fazem parte de um trabalho acadêmico.</p>
+      <button class="close-info-modal" type="button">Entendi</button>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ONG Sementes do Amanhã. Organização fictícia para fins acadêmicos.</p>
+  </footer>
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>

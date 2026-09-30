@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/html/">
+  <link rel="icon" href="../imagens/ong.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Cadastro de interesse | ONG Sementes do Amanhã</title>
+</head>
+<body>
+  <header>
+    <h1>Cadastro de interesse</h1>
+    <p>Use este formulário demonstrativo para conhecer a estrutura de um cadastro.</p>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu principal" aria-expanded="false" aria-controls="main-navigation">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <nav id="main-navigation" class="primary-navigation" aria-label="Navegação principal">
+      <ul id="main-navigation-list">
+        <li><a href="index.html">Início</a></li>
+        <li class="has-submenu">
+          <a href="projetos.html">Projetos</a>
+          <button class="submenu-toggle" type="button" aria-label="Abrir submenu de Projetos" aria-expanded="false" aria-controls="projects-submenu">
+            <span class="submenu-chevron" aria-hidden="true"></span>
+          </button>
+          <ul class="submenu" id="projects-submenu">
+            <li><a href="projetos.html#projetos-sociais">Projetos sociais</a></li>
+            <li><a href="projetos.html#campanhas">Campanhas</a></li>
+            <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+          </ul>
+        </li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <section>
+      <h2>Seus dados</h2>
+      <p><strong>Aviso:</strong> esta demonstração estática não salva os dados do formulário. Não informe dados pessoais reais ou sensíveis.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Dados pessoais</legend>
+
+          <p>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required>
+          </p>
+          <p>
+            <label for="cpf">CPF (formato 000.000.000-00):</label>
+            <input type="text" id="cpf" name="cpf" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" title="Digite o CPF no formato 000.000.000-00" required>
+          </p>
+          <p>
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contato</legend>
+
+          <p>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </p>
+          <p>
+            <label for="telefone">Telefone (formato (00) 00000-0000):</label>
+            <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" title="Digite o telefone no formato (00) 00000-0000" autocomplete="tel" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço</legend>
+
+          <p>
+            <label for="cep">CEP (formato 00000-000):</label>
+            <input type="text" id="cep" name="cep" pattern="[0-9]{5}-[0-9]{3}" title="Digite o CEP no formato 00000-000" autocomplete="postal-code" required>
+          </p>
+          <p>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" autocomplete="street-address" required>
+          </p>
+          <p>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required>
+          </p>
+          <p>
+            <label for="estado">Estado (sigla):</label>
+            <input type="text" id="estado" name="estado" maxlength="2" autocomplete="address-level1" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Segurança</legend>
+
+          <p>
+            <label for="senha">Senha demonstrativa:</label>
+            <input type="password" id="senha" name="senha" autocomplete="new-password" required>
+          </p>
+        </fieldset>
+
+        <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+        <button type="submit">Enviar cadastro</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ONG Sementes do Amanhã. Organização fictícia para fins acadêmicos.</p>
+  </footer>
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>
